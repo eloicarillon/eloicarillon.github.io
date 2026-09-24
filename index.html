@@ -16,7 +16,7 @@
         html, body {
             width: 100%;
             height: 100%;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         body {
@@ -32,73 +32,68 @@
             background-repeat: no-repeat;
 
             color: white;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             overflow: hidden;
         }
 
-        .page {
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 25px;
+        .overlay {
+            position: absolute;
+            inset: 0;
         }
 
-        .header {
+        .content {
+            position: relative;
+            z-index: 2;
+
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
             text-align: center;
-            margin-bottom: 55px;
         }
 
         .name {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(42px, 8vw, 76px);
+            font-size: 42px;
             font-weight: 400;
-            letter-spacing: 8px;
-            margin-bottom: 18px;
+            letter-spacing: 7px;
+            margin-bottom: 12px;
         }
 
         .title {
-            font-size: clamp(13px, 2vw, 17px);
-            letter-spacing: 6px;
+            font-size: 15px;
             font-weight: 300;
+            letter-spacing: 5px;
+            margin-bottom: 45px;
             text-transform: uppercase;
         }
 
-        .line {
-            width: 70px;
-            height: 1px;
-            background: rgba(255,255,255,0.75);
-            margin: 30px auto 0;
-        }
-
         .buttons {
-            width: 100%;
-            max-width: 520px;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            align-items: center;
+            gap: 14px;
+            width: 100%;
         }
 
         .button {
-            width: 100%;
-            min-height: 72px;
-            padding: 0 28px;
-
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+
+            width: 300px;
+
+            padding: 17px 20px;
 
             color: white;
             text-decoration: none;
 
-            border: 1px solid rgba(255,255,255,0.65);
-            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.45);
+            background: rgba(255,255,255,0.10);
 
-            background: rgba(15, 30, 45, 0.25);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
 
@@ -106,187 +101,122 @@
         }
 
         .button:hover {
-            background: rgba(255,255,255,0.16);
-            border-color: white;
-            transform: translateY(-2px);
+            background: rgba(255,255,255,0.20);
+            border-color: rgba(255,255,255,0.8);
         }
 
-        .icon {
-            width: 42px;
-            font-size: 22px;
-            text-align: center;
-            margin-right: 18px;
-        }
-
-        .button-text {
-            flex: 1;
-            text-align: left;
-        }
-
-        .button-title {
+        .button-main {
             font-size: 14px;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
 
-        .button-subtitle {
-            margin-top: 5px;
+        .button-sub {
             font-size: 10px;
             letter-spacing: 1.5px;
-            opacity: 0.65;
-            text-transform: uppercase;
-        }
-
-        .arrow {
-            font-size: 24px;
-            font-weight: 200;
-            opacity: 0.8;
+            margin-top: 5px;
+            opacity: 0.75;
         }
 
         .footer {
             position: absolute;
-            bottom: 25px;
-            font-size: 9px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            opacity: 0.65;
+            bottom: 24px;
+            left: 0;
+            width: 100%;
+
             text-align: center;
+
+            font-size: 10px;
+            letter-spacing: 3px;
+
+            opacity: 0.8;
+
+            z-index: 3;
         }
 
+
+        /* MOBILE */
         @media (max-width: 600px) {
 
-    .content {
-        transform: translateY(-45px);
-    }
+            .content {
+                transform: translateY(-45px);
+            }
 
-    .name {
-        font-size: 34px;
-        letter-spacing: 3px;
-        margin-bottom: 8px;
-    }
+        }
 
-    .title {
-        font-size: 13px;
-        letter-spacing: 3px;
-        margin-bottom: 32px;
-    }
-
-    .button {
-        width: 82%;
-        max-width: 320px;
-        padding: 15px 20px;
-        margin: 9px auto;
-    }
-
-    .footer {
-        bottom: 28px;
-        font-size: 11px;
-        letter-spacing: 2px;
-    }
-}
     </style>
 </head>
 
+
 <body>
 
-<div class="page">
+    <div class="overlay"></div>
 
-    <div class="header">
+    <div class="content">
 
         <div class="name">
             ELOI CARILLON
         </div>
 
         <div class="title">
-            Marine Engineer Officer
+            MARINE ENGINEER OFFICER
         </div>
 
-        <div class="line"></div>
 
-    </div>
+        <div class="buttons">
 
-
-    <div class="buttons">
-
-        <!-- LINKEDIN -->
-        <a
-            class="button"
-            href="https://www.linkedin.com/in/eloi-carillon-54b55a213"
-            target="_blank"
-        >
-            <div class="icon">in</div>
-
-            <div class="button-text">
-                <div class="button-title">
+            <a
+                class="button"
+                href="https://www.linkedin.com/in/eloi-carillon-54b55a213"
+                target="_blank"
+            >
+                <span class="button-main">
                     LinkedIn
-                </div>
+                </span>
 
-                <div class="button-subtitle">
+                <span class="button-sub">
                     Professional Profile
-                </div>
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-        </a>
+                </span>
+            </a>
 
 
-        <!-- CV -->
-        <a
-            class="button"
-            href="Eloi_Carillon_CV.pdf"
-            target="_blank"
-        >
-            <div class="icon">▤</div>
-
-            <div class="button-text">
-                <div class="button-title">
+            <a
+                class="button"
+                href="Eloi_Carillon_CV.pdf"
+                target="_blank"
+            >
+                <span class="button-main">
                     Curriculum Vitae
-                </div>
+                </span>
 
-                <div class="button-subtitle">
+                <span class="button-sub">
                     View / Download CV
-                </div>
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-        </a>
+                </span>
+            </a>
 
 
-        <!-- WHATSAPP -->
-        <a
-            class="button"
-            href="https://wa.me/33769655115"
-            target="_blank"
-        >
-            <div class="icon">◉</div>
-
-            <div class="button-text">
-                <div class="button-title">
+            <a
+                class="button"
+                href="https://wa.me/33769655115"
+                target="_blank"
+            >
+                <span class="button-main">
                     WhatsApp
-                </div>
+                </span>
 
-                <div class="button-subtitle">
+                <span class="button-sub">
                     Contact me
-                </div>
-            </div>
+                </span>
+            </a>
 
-            <div class="arrow">
-                →
-            </div>
-        </a>
+        </div>
 
     </div>
 
 
     <div class="footer">
-        France · Worldwide Availability
+        FRANCE · AVAILABLE WORLDWIDE
     </div>
-
-</div>
 
 </body>
 </html>
