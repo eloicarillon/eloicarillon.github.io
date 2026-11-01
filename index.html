@@ -9,17 +9,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --background: #fafaf8;
-      --text: #20252c;
-      --muted: #858991;
-      --accent: #263d57;
-      --line: #e5e5e1;
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -27,200 +19,124 @@
     }
 
     body {
-      background: var(--background);
-      color: var(--text);
-      font-family: 'Montserrat', sans-serif;
+      background: #ffffff;
+      color: #202124;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       -webkit-font-smoothing: antialiased;
     }
 
-    .page {
+    main {
+      width: min(700px, calc(100% - 48px));
       min-height: 100vh;
+      margin: auto;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      padding: 80px 0;
     }
 
-    main {
-      flex: 1;
-      width: min(1180px, calc(100% - 100px));
-      margin: auto;
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      align-items: center;
-      gap: 100px;
-      padding: 100px 0;
-    }
-
-    /* LEFT COLUMN */
+    /* IDENTITY */
 
     .identity {
-      position: relative;
-      padding-right: 55px;
-      border-right: 1px solid var(--line);
-      min-height: 420px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .eyebrow {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(65px, 7vw, 100px);
-      line-height: 0.88;
-      letter-spacing: -3px;
-      font-weight: 600;
-      margin: 65px 0 28px;
-    }
-
-    .role {
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      line-height: 1.8;
-      text-transform: uppercase;
-    }
-
-    .location {
-      color: var(--muted);
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    /* RIGHT COLUMN */
-
-    .details {
-      max-width: 540px;
-    }
-
-    .section {
       margin-bottom: 85px;
     }
 
-    .section-number {
-      display: block;
-      font-size: 10px;
+    h1 {
+      font-size: clamp(48px, 9vw, 76px);
+      font-weight: 800;
+      letter-spacing: -4px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .professional-title {
+      color: #777b80;
+      font-size: 15px;
+      font-weight: 500;
       letter-spacing: 2px;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 22px;
+      text-transform: uppercase;
     }
 
-    h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 37px;
-      font-weight: 600;
-      margin-bottom: 23px;
+    /* SECTIONS */
+
+    .section {
+      margin-bottom: 65px;
     }
 
-    .about {
-      font-size: 14px;
-      line-height: 2.1;
-      color: #555b63;
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #999da2;
+      margin-bottom: 25px;
+    }
+
+    .about-text {
+      font-size: 17px;
+      line-height: 1.9;
       font-weight: 400;
+      color: #45484d;
     }
 
     /* CONTACT */
 
-    .contact-list {
+    .contact {
       display: flex;
-      flex-direction: column;
-      gap: 18px;
+      gap: 35px;
+      flex-wrap: wrap;
     }
 
-    .contact-list a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--line);
+    .contact a {
+      color: #202124;
       text-decoration: none;
-      color: var(--text);
-      font-size: 13px;
-      font-weight: 500;
+      font-size: 15px;
+      font-weight: 600;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #b9a27e;
       transition: color 0.2s ease;
     }
 
-    .contact-list a span {
-      color: var(--accent);
-      font-size: 17px;
+    .contact a:hover {
+      color: #8b7351;
     }
 
-    .contact-list a:hover {
-      color: var(--accent);
+    .arrow {
+      margin-left: 5px;
+      font-weight: 400;
     }
 
     /* FOOTER */
 
     footer {
-      width: min(1180px, calc(100% - 100px));
-      margin: 0 auto;
-      border-top: 1px solid var(--line);
-      padding: 25px 0;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    footer p {
-      color: var(--muted);
-      font-size: 9px;
-      letter-spacing: 1.8px;
+      border-top: 1px solid #eeeeee;
+      padding: 22px;
+      text-align: center;
+      color: #a0a2a5;
+      font-size: 10px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
-    /* MOBILE */
-
-    @media (max-width: 750px) {
+    @media (max-width: 600px) {
       main {
-        width: calc(100% - 48px);
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 65px;
-        padding: 65px 0;
+        padding: 70px 0;
       }
 
       .identity {
-        border-right: none;
-        border-bottom: 1px solid var(--line);
-        min-height: auto;
-        padding: 0 0 40px;
+        margin-bottom: 70px;
       }
 
       h1 {
-        font-size: 76px;
-        margin: 55px 0 22px;
-      }
-
-      .location {
-        margin-top: 40px;
+        letter-spacing: -2.5px;
       }
 
       .section {
-        margin-bottom: 65px;
+        margin-bottom: 55px;
       }
 
-      h2 {
-        font-size: 33px;
-      }
-
-      footer {
-        width: calc(100% - 48px);
-      }
-    }
-
-    @media (max-width: 380px) {
-      h1 {
-        font-size: 64px;
+      .about-text {
+        font-size: 16px;
       }
     }
   </style>
@@ -228,80 +144,47 @@
 
 <body>
 
-<div class="page">
-
   <main>
 
-    <!-- IDENTITY -->
-    <section class="identity">
+    <header class="identity">
+      <h1>Eloi Carillon</h1>
+      <p class="professional-title">Marine Engineer Officer</p>
+    </header>
 
-      <p class="eyebrow">Professional Profile</p>
+    <section class="section">
+      <h2 class="section-title">About me</h2>
 
-      <div>
-        <h1>Eloi<br>Carillon</h1>
-        <p class="role">Marine Engineer<br>Officer</p>
-      </div>
-
-      <p class="location">France · Available Worldwide</p>
-
+      <p class="about-text">
+        Marine Engineer Officer graduated from the French National
+        Maritime Academy (ENSM), with professional experience aboard
+        LNG carriers. My background combines marine engineering,
+        mechanical maintenance and technical troubleshooting,
+        with a practical approach to machinery, equipment
+        and technical operations.
+      </p>
     </section>
 
-    <!-- DETAILS -->
-    <div class="details">
+    <section class="section">
+      <h2 class="section-title">Get in touch</h2>
 
-      <section class="section">
+      <div class="contact">
+        <a href="https://www.linkedin.com/in/eloi-carillon-54b55a213"
+           target="_blank" rel="noopener noreferrer">
+          LinkedIn <span class="arrow">↗</span>
+        </a>
 
-        <span class="section-number">01 — ABOUT</span>
-
-        <h2>Professional Background</h2>
-
-        <p class="about">
-          Marine Engineer Officer graduated from the French National
-          Maritime Academy (ENSM), with professional experience aboard
-          LNG carriers. My background combines marine engineering,
-          mechanical maintenance and technical troubleshooting,
-          with a practical approach to machinery, equipment
-          and technical operations.
-        </p>
-
-      </section>
-
-      <section class="section">
-
-        <span class="section-number">02 — CONTACT</span>
-
-        <h2>Get in touch</h2>
-
-        <div class="contact-list">
-
-          <a href="https://wa.me/33600000000"
-             target="_blank" rel="noopener noreferrer">
-            WhatsApp <span>↗</span>
-          </a>
-
-          <a href="https://www.linkedin.com/in/eloi-carillon-54b55a213"
-             target="_blank" rel="noopener noreferrer">
-            LinkedIn <span>↗</span>
-          </a>
-
-          <a href="mailto:YOUR_EMAIL">
-            Email <span>↗</span>
-          </a>
-
-        </div>
-
-      </section>
-
-    </div>
+        <a href="https://wa.me/33600000000"
+           target="_blank" rel="noopener noreferrer">
+          WhatsApp <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
 
   </main>
 
   <footer>
-    <p>Eloi Carillon</p>
-    <p>Marine Engineering</p>
+    France · Available Worldwide
   </footer>
-
-</div>
 
 </body>
 </html>
