@@ -5,21 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Eloi Carillon — Marine Engineer Officer</title>
-  <meta name="description" content="Eloi Carillon, Marine Engineer Officer. Marine engineering, mechanical maintenance and technical operations.">
+  <title>Eloi Carillon | Marine Engineer Officer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --background: #ffffff;
-      --text: #171c24;
-      --muted: #777e88;
-      --line: #e9ebee;
+      --background: #fafaf8;
+      --text: #20252c;
+      --muted: #858991;
       --accent: #263d57;
-      --soft: #f7f8fa;
+      --line: #e5e5e1;
     }
 
     * {
@@ -28,14 +26,10 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       background: var(--background);
       color: var(--text);
-      font-family: "DM Sans", sans-serif;
+      font-family: 'Montserrat', sans-serif;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -46,203 +40,187 @@
     }
 
     main {
-      width: min(100% - 64px, 1000px);
-      margin: 0 auto;
-      padding: 90px 0 80px;
       flex: 1;
-    }
-
-    /* HEADER */
-
-    .top-line {
-      display: flex;
-      justify-content: space-between;
+      width: min(1180px, calc(100% - 100px));
+      margin: auto;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
       align-items: center;
-      padding-bottom: 22px;
-      border-bottom: 1px solid var(--line);
-      margin-bottom: 100px;
+      gap: 100px;
+      padding: 100px 0;
     }
 
-    .top-label,
-    .availability {
-      font-size: 11px;
-      letter-spacing: 1.7px;
+    /* LEFT COLUMN */
+
+    .identity {
+      position: relative;
+      padding-right: 55px;
+      border-right: 1px solid var(--line);
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--muted);
-    }
-
-    .availability {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-    }
-
-    .availability::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #6d987c;
-    }
-
-    /* INTRO */
-
-    .intro {
-      margin-bottom: 115px;
     }
 
     h1 {
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(48px, 8vw, 88px);
-      font-weight: 700;
-      letter-spacing: -5px;
-      line-height: 1.05;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(65px, 7vw, 100px);
+      line-height: 0.88;
+      letter-spacing: -3px;
+      font-weight: 600;
+      margin: 65px 0 28px;
+    }
+
+    .role {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      line-height: 1.8;
+      text-transform: uppercase;
+    }
+
+    .location {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* RIGHT COLUMN */
+
+    .details {
+      max-width: 540px;
+    }
+
+    .section {
+      margin-bottom: 85px;
+    }
+
+    .section-number {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--accent);
+      font-weight: 600;
       margin-bottom: 22px;
     }
 
-    .professional-title {
-      color: var(--accent);
-      font-size: 15px;
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 37px;
       font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-    }
-
-    /* CONTENT */
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 55px;
-      padding: 38px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-label {
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding-top: 7px;
+      margin-bottom: 23px;
     }
 
     .about {
-      max-width: 650px;
-    }
-
-    .about p {
-      color: #414751;
-      font-size: 19px;
-      line-height: 1.85;
+      font-size: 14px;
+      line-height: 2.1;
+      color: #555b63;
       font-weight: 400;
     }
 
     /* CONTACT */
 
-    .contact {
+    .contact-list {
       display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px 36px;
+      flex-direction: column;
+      gap: 18px;
     }
 
-    .contact a {
-      display: inline-flex;
+    .contact-list a {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 9px;
-      color: var(--text);
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
       text-decoration: none;
-      font-size: 15px;
+      color: var(--text);
+      font-size: 13px;
       font-weight: 500;
-      padding-bottom: 7px;
-      border-bottom: 1px solid #b8c0ca;
-      transition: all 0.25s ease;
+      transition: color 0.2s ease;
     }
 
-    .contact a span {
+    .contact-list a span {
       color: var(--accent);
-      transition: transform 0.25s ease;
+      font-size: 17px;
     }
 
-    .contact a:hover {
+    .contact-list a:hover {
       color: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .contact a:hover span {
-      transform: translate(3px, -3px);
     }
 
     /* FOOTER */
 
     footer {
+      width: min(1180px, calc(100% - 100px));
+      margin: 0 auto;
       border-top: 1px solid var(--line);
-      padding: 25px 32px;
+      padding: 25px 0;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      width: 100%;
+      gap: 20px;
     }
 
     footer p {
-      color: #9298a1;
-      font-size: 11px;
-      letter-spacing: 1.3px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
     }
 
     /* MOBILE */
 
-    @media (max-width: 650px) {
+    @media (max-width: 750px) {
       main {
-        width: calc(100% - 44px);
-        padding: 45px 0 65px;
+        width: calc(100% - 48px);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 65px;
+        padding: 65px 0;
       }
 
-      .top-line {
-        margin-bottom: 85px;
-      }
-
-      .top-label,
-      .availability {
-        font-size: 9px;
-        letter-spacing: 1px;
-      }
-
-      .intro {
-        margin-bottom: 85px;
+      .identity {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        min-height: auto;
+        padding: 0 0 40px;
       }
 
       h1 {
-        font-size: clamp(43px, 12vw, 64px);
-        letter-spacing: -3px;
+        font-size: 76px;
+        margin: 55px 0 22px;
       }
 
-      .professional-title {
-        font-size: 12px;
-        letter-spacing: 1.7px;
+      .location {
+        margin-top: 40px;
       }
 
-      .content-grid {
-        grid-template-columns: 1fr;
-        gap: 23px;
-        padding: 30px 0 38px;
+      .section {
+        margin-bottom: 65px;
       }
 
-      .about p {
-        font-size: 17px;
-        line-height: 1.8;
-      }
-
-      .contact {
-        gap: 20px 28px;
+      h2 {
+        font-size: 33px;
       }
 
       footer {
-        padding: 22px;
-        gap: 12px;
-        flex-wrap: wrap;
+        width: calc(100% - 48px);
+      }
+    }
+
+    @media (max-width: 380px) {
+      h1 {
+        font-size: 64px;
       }
     }
   </style>
@@ -254,21 +232,30 @@
 
   <main>
 
-    <header class="top-line">
-      <p class="top-label">Personal Profile</p>
-      <p class="availability">France · Worldwide</p>
-    </header>
+    <!-- IDENTITY -->
+    <section class="identity">
 
-    <section class="intro">
-      <h1>Eloi Carillon</h1>
-      <p class="professional-title">Marine Engineer Officer</p>
+      <p class="eyebrow">Professional Profile</p>
+
+      <div>
+        <h1>Eloi<br>Carillon</h1>
+        <p class="role">Marine Engineer<br>Officer</p>
+      </div>
+
+      <p class="location">France · Available Worldwide</p>
+
     </section>
 
-    <section class="content-grid">
-      <h2 class="section-label">About me</h2>
+    <!-- DETAILS -->
+    <div class="details">
 
-      <div class="about">
-        <p>
+      <section class="section">
+
+        <span class="section-number">01 — ABOUT</span>
+
+        <h2>Professional Background</h2>
+
+        <p class="about">
           Marine Engineer Officer graduated from the French National
           Maritime Academy (ENSM), with professional experience aboard
           LNG carriers. My background combines marine engineering,
@@ -276,27 +263,36 @@
           with a practical approach to machinery, equipment
           and technical operations.
         </p>
-      </div>
-    </section>
 
-    <section class="content-grid">
-      <h2 class="section-label">Get in touch</h2>
+      </section>
 
-      <div class="contact">
-        <a href="https://wa.me/33600000000" target="_blank" rel="noopener noreferrer">
-          WhatsApp <span>↗</span>
-        </a>
+      <section class="section">
 
-        <a href="https://www.linkedin.com/in/eloi-carillon-54b55a213"
-           target="_blank" rel="noopener noreferrer">
-          LinkedIn <span>↗</span>
-        </a>
+        <span class="section-number">02 — CONTACT</span>
 
-        <a href="mailto:YOUR_EMAIL">
-          Email <span>↗</span>
-        </a>
-      </div>
-    </section>
+        <h2>Get in touch</h2>
+
+        <div class="contact-list">
+
+          <a href="https://wa.me/33600000000"
+             target="_blank" rel="noopener noreferrer">
+            WhatsApp <span>↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/eloi-carillon-54b55a213"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn <span>↗</span>
+          </a>
+
+          <a href="mailto:YOUR_EMAIL">
+            Email <span>↗</span>
+          </a>
+
+        </div>
+
+      </section>
+
+    </div>
 
   </main>
 
