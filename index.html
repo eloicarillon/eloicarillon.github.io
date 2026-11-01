@@ -1,24 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Eloi Carillon — Marine Engineer Officer. Technical skills in mechanical engineering, welding, maintenance and inspection.">
-
-<title>Eloi Carillon — Marine Engineer Officer</title>
+<title>Eloi Carillon | Marine Engineer Officer</title>
+<meta name="description" content="Marine Engineer Officer — Mechanical engineering, welding, maintenance, electrical systems, plumbing and technical inspection.">
 
 <style>
-
 :root {
-    --ink: #202522;
-    --muted: #747a75;
-    --line: #e8e9e5;
-    --soft: #f6f7f5;
-    --accent: #9a7959;
-    --max: 1000px;
+    --black: #202421;
+    --grey: #707771;
+    --light: #f5f6f4;
+    --line: #e5e8e4;
+    --accent: #a18463;
+    --white: #ffffff;
 }
 
 * {
@@ -31,10 +28,9 @@ html {
 
 body {
     margin: 0;
-    background: #fff;
-    color: var(--ink);
-    font-family: Inter, -apple-system, BlinkMacSystemFont,
-                 "Segoe UI", Arial, sans-serif;
+    background: var(--white);
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -44,8 +40,8 @@ a {
 }
 
 .container {
-    width: min(var(--max), calc(100% - 48px));
-    margin: 0 auto;
+    width: min(1080px, calc(100% - 48px));
+    margin: auto;
 }
 
 /* HEADER */
@@ -58,182 +54,232 @@ header {
     border-bottom: 1px solid var(--line);
 }
 
-.name {
+.logo {
     font-size: 13px;
     font-weight: 700;
-    letter-spacing: .16em;
+    letter-spacing: 2px;
 }
 
-.header-links {
+.navigation {
     display: flex;
-    gap: 22px;
-    color: var(--muted);
+    align-items: center;
+    gap: 25px;
     font-size: 12px;
+    color: var(--grey);
 }
 
-.header-links a:hover,
-.footer-links a:hover {
+.navigation a:hover {
     color: var(--accent);
 }
 
-/* INTRODUCTION */
+/* HERO */
 
-.intro {
-    padding: 104px 0 82px;
+.hero {
+    padding: 90px 0 65px;
 }
 
 .eyebrow {
     color: var(--accent);
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: .2em;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
 }
 
 h1 {
-    margin: 20px 0 12px;
-    font-size: clamp(43px, 7vw, 76px);
-    line-height: 1;
-    letter-spacing: -.065em;
+    margin: 22px 0 12px;
+    font-size: clamp(46px, 7vw, 76px);
     font-weight: 500;
+    letter-spacing: -4px;
+    line-height: 1;
 }
 
-.role {
+.job-title {
     margin: 0;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: .13em;
-    color: #555d57;
-    text-transform: uppercase;
-}
-
-.intro-text {
-    max-width: 590px;
-    margin: 28px 0 0;
-    color: var(--muted);
     font-size: 15px;
-    line-height: 1.85;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #626a64;
 }
 
-.rule {
-    border: 0;
-    border-top: 1px solid var(--line);
-    margin: 0;
+.hero-description {
+    max-width: 610px;
+    margin-top: 27px;
+    color: var(--grey);
+    font-size: 15px;
+    line-height: 1.8;
 }
 
-/* TECHNICAL SKILLS */
+.hero-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 38px;
+}
+
+.location {
+    color: var(--grey);
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 19px;
+    background: var(--black);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    transition: .2s;
+}
+
+.button:hover {
+    background: var(--accent);
+}
+
+.button.secondary {
+    background: white;
+    color: var(--black);
+    border: 1px solid var(--line);
+}
+
+.button.secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* SKILLS */
 
 .skills-section {
-    padding: 62px 0 76px;
+    padding: 65px 0 75px;
+    background: var(--light);
+}
+
+.section-heading {
+    margin-bottom: 35px;
 }
 
 .section-label {
     color: var(--accent);
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: .18em;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 12px;
 }
 
 h2 {
-    margin: 0 0 34px;
-    font-size: clamp(28px, 4vw, 38px);
+    margin: 12px 0 0;
+    font-size: 34px;
     font-weight: 500;
-    letter-spacing: -.045em;
+    letter-spacing: -1.5px;
 }
 
-.skills {
+.skills-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 64px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
 }
 
-.skill {
-    padding: 23px 0 25px;
-    border-top: 1px solid var(--line);
-    display: grid;
-    grid-template-columns: 34px 1fr;
-    gap: 14px;
+.skill-card {
+    min-height: 185px;
+    padding: 27px 25px;
+    background: white;
 }
 
-.number {
+.skill-number {
     color: var(--accent);
     font-size: 10px;
-    padding-top: 3px;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
 }
 
-h3 {
-    margin: 0 0 8px;
+.skill-card h3 {
+    margin: 0 0 12px;
     font-size: 16px;
     font-weight: 600;
 }
 
-.skill p {
+.skill-card p {
     margin: 0;
-    color: var(--muted);
+    color: var(--grey);
     font-size: 12px;
     line-height: 1.8;
 }
 
-/* PROFESSIONAL BACKGROUND */
+/* TECHNICAL BACKGROUND */
 
-.experience {
-    background: var(--soft);
-    padding: 62px 0 66px;
+.background-section {
+    padding: 70px 0;
 }
 
-.experience-grid {
+.background-grid {
     display: grid;
-    grid-template-columns: .7fr 1.3fr;
+    grid-template-columns: 1fr 1fr;
     gap: 70px;
 }
 
-.experience-copy {
-    margin: 0;
-    max-width: 610px;
-    color: #626a64;
+.background-text {
+    color: var(--grey);
     font-size: 14px;
     line-height: 1.9;
+    margin: 18px 0 0;
 }
 
-.experience-tags {
+.technical-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 22px;
+    flex-direction: column;
 }
 
-.tag {
-    padding: 8px 11px;
-    border: 1px solid #dfe2dc;
-    color: #626a64;
-    font-size: 10px;
-    letter-spacing: .03em;
+.technical-item {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.technical-item span:last-child {
+    color: var(--grey);
+    text-align: right;
 }
 
 /* FOOTER */
 
 footer {
-    min-height: 82px;
+    border-top: 1px solid var(--line);
+    padding: 25px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    color: var(--muted);
+    color: var(--grey);
     font-size: 10px;
-    letter-spacing: .05em;
 }
 
 .footer-links {
     display: flex;
     gap: 20px;
-    font-size: 11px;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
 }
 
 /* MOBILE */
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
 
     .container {
         width: calc(100% - 36px);
@@ -243,31 +289,64 @@ footer {
         height: 68px;
     }
 
-    .header-links {
-        gap: 14px;
+    .navigation {
+        gap: 13px;
         font-size: 10px;
     }
 
-    .intro {
-        padding: 76px 0 62px;
+    .hero {
+        padding: 65px 0 50px;
+    }
+
+    h1 {
+        letter-spacing: -2.5px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skill-card {
+        min-height: 190px;
+        padding: 20px 16px;
+    }
+
+    .background-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .skills-section,
-    .experience {
-        padding: 48px 0 54px;
-    }
-
-    .skills {
-        grid-template-columns: 1fr;
-    }
-
-    .experience-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+    .background-section {
+        padding: 50px 0;
     }
 
     footer {
-        padding: 22px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        min-height: auto;
+        padding: 23px;
+    }
+
+    .navigation {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 11px;
+    }
+
+    .hero-bottom {
         align-items: flex-start;
         flex-direction: column;
     }
@@ -280,323 +359,297 @@ footer {
 
 <div class="container">
 
-    <!-- HEADER -->
+<!-- HEADER -->
 
-    <header>
+<header>
 
-        <a class="name" href="#top">
-            ELOI CARILLON
+    <a class="logo" href="#home">
+        ELOI CARILLON
+    </a>
+
+    <nav class="navigation">
+        <a href="#skills">SKILLS</a>
+        <a href="#background">BACKGROUND</a>
+        <a href="https://www.linkedin.com/in/eloi-carillon-54b55a213"
+           target="_blank" rel="noopener">
+           LINKEDIN ↗
         </a>
+    </nav>
 
-        <nav class="header-links" aria-label="Contact links">
+</header>
 
-            <a href="https://www.linkedin.com/in/eloi-carillon-54b55a213"
+
+<main>
+
+<!-- INTRODUCTION -->
+
+<section class="hero" id="home">
+
+    <div class="eyebrow">
+        Technical Profile · France
+    </div>
+
+    <h1>
+        Eloi Carillon
+    </h1>
+
+    <p class="job-title">
+        Marine Engineer Officer
+    </p>
+
+    <p class="hero-description">
+        Marine engineering professional with a broad
+        technical background in mechanical systems,
+        welding, maintenance, electrical systems,
+        plumbing and technical inspection.
+        <br>
+        Practical experience developed through maritime
+        engineering and hands-on technical work.
+    </p>
+
+    <div class="hero-bottom">
+
+        <div class="location">
+            France · Available Worldwide
+        </div>
+
+        <div class="contact-buttons">
+
+            <a class="button"
+               href="https://wa.me/33600000000"
                target="_blank"
                rel="noopener">
-                LinkedIn ↗
+                WHATSAPP ↗
             </a>
 
-            <a href="https://wa.me/33600000000"
+            <a class="button secondary"
+               href="https://www.linkedin.com/in/eloi-carillon-54b55a213"
                target="_blank"
                rel="noopener">
-                WhatsApp ↗
-            </a>
-
-        </nav>
-
-    </header>
-
-
-    <main id="top">
-
-        <!-- INTRODUCTION -->
-
-        <section class="intro">
-
-            <div class="eyebrow">
-                Technical profile
-            </div>
-
-            <h1>
-                Eloi Carillon
-            </h1>
-
-            <p class="role">
-                Marine Engineer Officer
-            </p>
-
-            <p class="intro-text">
-                Technical experience across marine engineering,
-                mechanical systems, equipment maintenance and
-                hands-on workshop operations.
-
-                A broad practical skill set developed through
-                maritime engineering and technical work.
-            </p>
-
-        </section>
-
-
-        <hr class="rule">
-
-
-        <!-- TECHNICAL SKILLS -->
-
-        <section class="skills-section" id="skills">
-
-            <div class="section-label">
-                01 / Technical skills
-            </div>
-
-            <h2>
-                Areas of expertise
-            </h2>
-
-            <div class="skills">
-
-                <article class="skill">
-
-                    <div class="number">01</div>
-
-                    <div>
-                        <h3>Mechanical engineering</h3>
-
-                        <p>
-                            Mechanical maintenance, assembly and
-                            dismantling, repairs, rotating equipment,
-                            pumps, compressors, valves and machinery
-                            troubleshooting.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="skill">
-
-                    <div class="number">02</div>
-
-                    <div>
-                        <h3>Welding & metalwork</h3>
-
-                        <p>
-                            MMA, MIG/MAG and TIG welding,
-                            metal preparation, cutting, grinding,
-                            fitting and basic fabrication work.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="skill">
-
-                    <div class="number">03</div>
-
-                    <div>
-                        <h3>Maintenance & diagnostics</h3>
-
-                        <p>
-                            Preventive and corrective maintenance,
-                            fault finding, equipment checks,
-                            servicing and technical follow-up.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="skill">
-
-                    <div class="number">04</div>
-
-                    <div>
-                        <h3>Electrical systems</h3>
-
-                        <p>
-                            Practical knowledge of electrical
-                            equipment, motors, generators,
-                            electrical maintenance and basic
-                            troubleshooting.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="skill">
-
-                    <div class="number">05</div>
-
-                    <div>
-                        <h3>Plumbing & pipework</h3>
-
-                        <p>
-                            Pipework, fittings, valves, fluid
-                            circuits, connections, water systems
-                            and general plumbing maintenance.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="skill">
-
-                    <div class="number">06</div>
-
-                    <div>
-                        <h3>Inspection & technical assessment</h3>
-
-                        <p>
-                            Visual and mechanical inspections,
-                            equipment condition checks,
-                            fault identification and
-                            technical reporting.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="skill">
-
-                    <div class="number">07</div>
-
-                    <div>
-                        <h3>Marine & industrial systems</h3>
-
-                        <p>
-                            Propulsion, MAN ME-GA dual-fuel engines,
-                            diesel generators, auxiliary machinery,
-                            hydraulics, pneumatics and fluid systems.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="skill">
-
-                    <div class="number">08</div>
-
-                    <div>
-                        <h3>Technical operations</h3>
-
-                        <p>
-                            Work preparation, planning, coordination,
-                            team communication, safety procedures
-                            and maintenance documentation.
-                        </p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROFESSIONAL BACKGROUND -->
-
-        <section class="experience">
-
-            <div class="experience-grid">
-
-                <div>
-
-                    <div class="section-label">
-                        02 / Professional background
-                    </div>
-
-                    <h2>
-                        Marine engineering
-                    </h2>
-
-                </div>
-
-
-                <div>
-
-                    <p class="experience-copy">
-
-                        Marine Engineer Officer with experience
-                        aboard LNG carriers and other maritime vessels.
-
-                        Professional experience includes the operation
-                        and maintenance of propulsion systems, power
-                        generation and auxiliary machinery, with
-                        hands-on exposure to MAN ME-GA dual-fuel engines.
-
-                        <br><br>
-
-                        This background provides a strong foundation
-                        in mechanical systems, technical maintenance,
-                        troubleshooting and multidisciplinary
-                        engineering environments.
-
-                    </p>
-
-
-                    <div class="experience-tags">
-
-                        <span class="tag">ENSM</span>
-
-                        <span class="tag">Marine Engineering</span>
-
-                        <span class="tag">LNG Carriers</span>
-
-                        <span class="tag">MAN ME-GA</span>
-
-                        <span class="tag">Power Generation</span>
-
-                        <span class="tag">Auxiliary Machinery</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <span>
-            © <span id="year"></span> ELOI CARILLON
-        </span>
-
-        <div class="footer-links">
-
-            <a href="https://www.linkedin.com/in/eloi-carillon-54b55a213"
-               target="_blank"
-               rel="noopener">
-                LinkedIn ↗
-            </a>
-
-            <a href="https://wa.me/33600000000"
-               target="_blank"
-               rel="noopener">
-                WhatsApp ↗
+                LINKEDIN ↗
             </a>
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
+
+
+<!-- TECHNICAL SKILLS -->
+
+<section class="skills-section" id="skills">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            01 / Technical skills
+        </div>
+
+        <h2>
+            What I do
+        </h2>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <article class="skill-card">
+
+            <div class="skill-number">01</div>
+
+            <h3>Mechanical Engineering</h3>
+
+            <p>
+                Mechanical repairs, assembly and dismantling,
+                rotating equipment, pumps, compressors,
+                valves and machinery maintenance.
+            </p>
+
+        </article>
+
+
+        <article class="skill-card">
+
+            <div class="skill-number">02</div>
+
+            <h3>Welding & Metalwork</h3>
+
+            <p>
+                MMA, MIG/MAG and TIG welding,
+                metal preparation, cutting, grinding,
+                fitting and fabrication.
+            </p>
+
+        </article>
+
+
+        <article class="skill-card">
+
+            <div class="skill-number">03</div>
+
+            <h3>Maintenance & Diagnostics</h3>
+
+            <p>
+                Preventive and corrective maintenance,
+                troubleshooting, servicing, fault finding
+                and technical follow-up.
+            </p>
+
+        </article>
+
+
+        <article class="skill-card">
+
+            <div class="skill-number">04</div>
+
+            <h3>Electrical Systems</h3>
+
+            <p>
+                Electrical equipment, motors, generators,
+                practical electrical maintenance
+                and basic troubleshooting.
+            </p>
+
+        </article>
+
+
+        <article class="skill-card">
+
+            <div class="skill-number">05</div>
+
+            <h3>Plumbing & Pipework</h3>
+
+            <p>
+                Pipework, fittings, valves, connections,
+                fluid circuits, water systems
+                and general plumbing maintenance.
+            </p>
+
+        </article>
+
+
+        <article class="skill-card">
+
+            <div class="skill-number">06</div>
+
+            <h3>Inspection & Assessment</h3>
+
+            <p>
+                Visual and mechanical inspections,
+                equipment condition checks,
+                fault identification and reporting.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- PROFESSIONAL BACKGROUND -->
+
+<section class="background-section" id="background">
+
+    <div class="background-grid">
+
+        <div>
+
+            <div class="section-label">
+                02 / Professional background
+            </div>
+
+            <h2>
+                Marine Engineering
+            </h2>
+
+            <p class="background-text">
+                Marine Engineer Officer with professional
+                experience aboard LNG carriers and maritime vessels.
+
+                Experienced in the operation and maintenance
+                of propulsion systems, power generation and
+                auxiliary machinery, including MAN ME-GA
+                dual-fuel engines.
+            </p>
+
+        </div>
+
+
+        <div class="technical-list">
+
+            <div class="technical-item">
+                <strong>Education</strong>
+                <span>ENSM</span>
+            </div>
+
+            <div class="technical-item">
+                <strong>Propulsion</strong>
+                <span>MAN ME-GA</span>
+            </div>
+
+            <div class="technical-item">
+                <strong>Experience</strong>
+                <span>LNG Carriers</span>
+            </div>
+
+            <div class="technical-item">
+                <strong>Power generation</strong>
+                <span>Diesel Generators</span>
+            </div>
+
+            <div class="technical-item">
+                <strong>Machinery</strong>
+                <span>Auxiliary Systems</span>
+            </div>
+
+            <div class="technical-item">
+                <strong>Languages</strong>
+                <span>French · English · Spanish</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <span>
+        © <span id="year"></span> ELOI CARILLON
+    </span>
+
+    <div class="footer-links">
+
+        <a href="https://www.linkedin.com/in/eloi-carillon-54b55a213"
+           target="_blank" rel="noopener">
+            LINKEDIN ↗
+        </a>
+
+        <a href="https://wa.me/33600000000"
+           target="_blank" rel="noopener">
+            WHATSAPP ↗
+        </a>
+
+    </div>
+
+</footer>
 
 </div>
 
 
 <script>
-
 document.getElementById("year").textContent =
     new Date().getFullYear();
-
 </script>
 
 </body>
